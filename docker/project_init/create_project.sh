@@ -1,7 +1,9 @@
-docker-compose run --rm app sh -c "
-mv ./docker/project_init/init_file/* gatsby-app && \
+docker-compose run --rm develop sh -c "
+yarn global add gatsby-cli && \
+gatsby new gatsby-app && \
+cp ./docker/project_init/init_file/* gatsby-app && \
 mv gatsby-app/* ./ && \
-rm -rf node_modules/sharp && \
-rm -rf gatsby-app && \
-yarn && yarn cache clean"
-
+mv gatsby-app/.* ./ && \
+rm -f yarn.lock && \
+yarn && yarn cache clean && \
+rm -rf gatsby-app"
