@@ -10,13 +10,13 @@ services:
       - type: bind
         source: ../
         target: /home/workspace
-    command: sh -c "yarn start"
+    command: sh -c "yarn develop"
     networks:
-      - docknet
+      - gatsby-container
     ports:
       - "3000:3000"
 
 
 networks:
-  docknet:
-    external: true
+  gatsby-container:
+    external: false
