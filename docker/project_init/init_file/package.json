@@ -14,7 +14,8 @@
     "gatsby-plugin-typescript": "^2.1.26",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-sharp": "^2.3.7",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "sharp": "^0.24.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
